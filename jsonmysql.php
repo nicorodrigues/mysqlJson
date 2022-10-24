@@ -35,8 +35,8 @@ $tiposDefault = "varchar(100)";
 /****************************************
 * SE TRAEN LOS DATOS DEL ARCHIVO JSON  *
 ****************************************/
-
-$array = explode(PHP_EOL, file_get_contents($archivo));
+$EOL = PHP_EOL;
+$array = explode($EOL, file_get_contents($archivo));
 
 foreach ($array as $key => $value) {
 	$arrayTerminado[] = json_decode($value, true);
